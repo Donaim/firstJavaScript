@@ -1,10 +1,11 @@
 
-sayhello();
+// sayhello();
 
 function sayhello() {
-    document.writeln("HELLO ajhdajdhajs!!!");
+    document.writeln("enter name!!!!");
     var ans = prompt("wh s yr nm???? mmm??");
-    document.writeln("hi,", ans, "!");
+    document.writeln("<br/>");
+    document.writeln("yo,", ans, "!");
 }
 
 sayhello();
