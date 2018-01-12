@@ -1,5 +1,5 @@
 
-// sayhello();
+sayhello();
 
 function sayhello() {
     document.writeln("enter name!!!!");
