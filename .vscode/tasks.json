@@ -10,19 +10,56 @@
                 "kind": "build",
                 "isDefault": true
             },
-            
             "windows": {
                 "command": "chrome",
-                "args": [ "${workspaceFolder}/index.html" ]
+                "args": [
+                    "${workspaceFolder}/index.html"
+                ]
             },
             "linux": {
                 "command": "chromium",
-                "args": [ "${workspaceFolder}/index.html" ]
+                "args": [
+                    "${workspaceFolder}/index.html"
+                ]
             },
             "osx": {
                 "command": "chromium",
-                "args": [ "${workspaceFolder}/index.html" ]
-            }
+                "args": [
+                    "${workspaceFolder}/index.html"
+                ]
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "commit",
+            "type": "shell",
+            "command": "",
+            "args": [
+                "git add * ; git commit -m \"auto\"",
+                ";",
+                "./pastebin_upload.sh"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "push",
+            "type": "shell",
+            "dependsOn": "commit",
+            "command": "git",
+            "args": [
+                "push",
+                "origin",
+                "master"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
         }
     ]
 }
